@@ -1,0 +1,28 @@
+
+int led = 3; 
+int led1= 4;
+void setup()
+{
+  pinMode(led, OUTPUT);
+  pinMode(led1, OUTPUT); 
+}
+
+void loop()
+{
+  if (digitalRead (2) == HIGH)
+  {
+    digitalWrite(led, HIGH);
+  }
+  if (digitalRead (2) == LOW)
+  {
+    digitalWrite(led, LOW);
+  }
+  if (digitalRead (2) == LOW)
+  {
+    digitalWrite(led1, HIGH);
+  } 
+  if (digitalRead (2) == HIGH)
+  {
+    digitalWrite(led1, LOW);
+  }
+}
