@@ -1,0 +1,39 @@
+// C++ code
+//
+
+int lampada;
+int movimento;
+int led;
+int Alarme;
+int x;
+
+void setup()
+{
+  led = 2;
+  lampada = 4;
+  movimento = 11;
+  Alarme = 5;
+  
+  pinMode(lampada, OUTPUT);
+  pinMode(movimento, INPUT);
+  pinMode(Alarme, OUTPUT);
+  pinMode(led, OUTPUT);
+}
+
+void loop()
+{
+  	x = digitalRead(movimento);
+  
+  if (x == HIGH) {
+  
+    tone(Alarme, 220);
+  digitalWrite(led, HIGH);
+  digitalWrite(lampada, HIGH);	  
+
+  } else if (x == LOW){
+  digitalWrite(led, LOW);
+  digitalWrite(lampada, LOW);	
+    noTone(Alarme);
+  }
+}
+
